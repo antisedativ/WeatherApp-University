@@ -1,6 +1,6 @@
 import React from 'react';
 import cl from './Header.module.scss'
-import ThemeSwitcher from "../../UI/ThemeSwitcher/ThemeSwitcher";
+import ThemeSwitcher from "../../components/ThemeSwitcher/ThemeSwitcher";
 
 const Header = () => {
     return (
