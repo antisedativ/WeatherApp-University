@@ -1,0 +1,46 @@
+@import '../../styles/variables';
+
+.info__wrapper {
+  width: 1160px;
+  height: 700px;
+  margin-right: 90px;
+}
+
+.info__tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info__list {
+  margin: 0;
+  padding: 0;
+  width: 580px;
+  height: 55px;
+
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+
+  list-style-type: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 68px;
+}
+
+.info__list_item {
+  color: $white;
+  cursor: pointer;
+  display: block;
+  opacity: .2;
+  &:hover {
+    opacity: 1;
+    transition: .2s;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.info__switcher {}

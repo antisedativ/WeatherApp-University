@@ -1,0 +1,88 @@
+@import '../../styles/variables';
+
+/*Switch*/
+
+.switch {
+  position: relative;
+  width: 260px;
+  height: 55px;
+  display: block;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider.round {
+  border-radius: $btn-border;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $item-bg;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border: $border;
+}
+/*Moving SLider Section*/
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  left: 0;
+  bottom: 0;
+  background: $switch-bg-gradient;
+  border-radius: $btn-border;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/*Slider Text*/
+
+.slider_text {
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.slider_text > span {
+  color: $white;
+  font-size: 18px;
+  width: 50%;
+  display: block;
+  float: left;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+/*Changes on Slide*/
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(130px);
+  -ms-transform: translateX(130px);
+  transform: translateX(130px);
+}
+
+input:checked + .slider .off {
+  color: $white;
+}
+
+input:checked + .slider .on {
+  color: $white;
+}
+
+.slider .slider_text .on {
+  color: $black;
+}

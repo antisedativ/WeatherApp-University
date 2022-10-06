@@ -17,3 +17,8 @@ body {
   margin: 0 auto;
   width: 1620px;
 }
+
+.content {
+  display: flex;
+  flex-direction: row;
+}

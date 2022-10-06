@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 47px;
+  margin-bottom: 70px;
 }
 
 .header__content {
@@ -67,6 +68,7 @@
   font-size: 24px;
   border: $border;
   padding-left: 20px;
+  margin-right: 40px;
   color: $white;
 }
 
@@ -74,7 +76,7 @@
   width: 50px;
   height: 70px;
   position: absolute;
-  left: 1120px;
+  left: 1095px;
   cursor: pointer;
 
   & svg {
@@ -84,11 +86,7 @@
 }
 
 .header__switch_theme {
-  //width: 140px;
-  //height: 70px;
-  //background: $item-bg;
-  //border-radius: $btn-border;
-  //border: $border;
+
 }
 
 .header__avatar {

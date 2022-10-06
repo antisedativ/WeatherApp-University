@@ -21,7 +21,7 @@ $checkbox-size: 65px;
   width: 140px;
   height: 70px;
   font-size: 60%;
-  box-shadow: inset -#{$checkbox-size} 0 0 #fff, inset 0 0 0 1px #fff;
+  box-shadow: inset -#{$checkbox-size} 0 0 #f0f0f0, inset 0 0 0 1px #f0f0f0;
   transition: box-shadow .15s;
   &::before, &::after {
     color: #fff;
