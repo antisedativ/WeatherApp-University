@@ -12,6 +12,7 @@ $black: #000;
 /* gradients */
 $switch-bg-gradient: linear-gradient(93.16deg, #31DAFF 0%, #E231FF 97.43%);
 $day-bg-gradient: linear-gradient(180deg, #1B1A1D 29.95%, #3B3A3E 150.81%);
+$day-card-gradient: linear-gradient(50deg, #31DAFF 10%, #316BFF, #E231FF 90% );
 
 /* borders */
 $btn-border: 100px;
@@ -21,6 +22,6 @@ $border: 1px solid #4a494a;
 
 
 /* font sizes */
-
+$sm-fs: 24px // НАзвание дней в карточках
 
 /* shadows */

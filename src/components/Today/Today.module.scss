@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+
+$padding: 0 25px;
+
+hr {
+  border: .5px solid rgba(255, 255, 255, 0.2);
+  width: 265px;
+  height: 0;
+  box-sizing: content-box;
+  display: block;
+}
+
+.wrapper {
+  width: 320px;
+  height: 320px;
+  background: $day-card-gradient;
+  border: $border;
+  border-radius: $primary-border;
+  color: $white;
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
+}
+
+.content_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: $sm-fs;
+  line-height: 68px;
+  padding: $padding;
+}
+
+.content_main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: $padding;
+
+  .temperature {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 68px;
+  }
+
+  .icon img{
+    width: 125px;
+    height: 125px;
+  }
+}
+
+.content_bottom {
+  padding: $padding;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 15px;
+  line-height: 25px;
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
