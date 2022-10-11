@@ -44,20 +44,27 @@ const data:Data[] = [
 
 const Info = () => {
     return (
-        <div className={cl.info__wrapper}>
-            <div className={cl.info__tabs}>
-                <ul className={cl.info__list}>
-                    <li className={cl.info__list_item}>Today</li>
-                    <li className={cl.info__list_item}>Tomorrow</li>
-                    <li className={[cl.info__list_item, cl.active].join(" ")}>Next 5 days</li>
+        <div className={cl.wrapper}>
+            <div className={cl.tabs}>
+                <ul className={cl.list}>
+                    <li className={cl.list_item}>Today</li>
+                    <li className={cl.list_item}>Tomorrow</li>
+                    <li className={[cl.list_item, cl.active].join(" ")}>Next 5 days</li>
                 </ul>
-                <div className={cl.info__switcher}>
+                <div className={cl.switcher}>
                     <InfoSwitcher/>
                 </div>
             </div>
-            <div className={cl.info__days}>
+            <div className={cl.days}>
                 <Today />
                 {data.map((data:Data) => (<Day props={data}/>))}
+            </div>
+            <div className={cl.tabs_map} >
+                <div>Global map</div>
+                <button className={cl.tabs_map_btn}>View wide</button>
+            </div>
+            <div className={cl.map_wrapper}>
+                {}
             </div>
         </div>
     );

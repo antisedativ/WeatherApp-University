@@ -1,18 +1,18 @@
 @import '../../styles/variables';
 
-.info__wrapper {
+.wrapper {
   width: 1160px;
   height: 700px;
   margin-right: 90px;
 }
 
-.info__tabs {
+.tabs {
   display: flex;
   justify-content: space-between;
   margin-bottom: 34px;
 }
 
-.info__list {
+.list {
   margin: 0;
   padding: 0;
   width: 580px;
@@ -29,7 +29,7 @@
   line-height: 68px;
 }
 
-.info__list_item {
+.list_item {
   color: $white;
   cursor: pointer;
   display: block;
@@ -44,10 +44,52 @@
   }
 }
 
-.info__switcher {}
+.switcher {}
 
 
-.info__days {
+.days {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 70px;
 }
+
+.tabs_map {
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 40px;
+
+  .tabs_map_btn {
+    font-style: normal;
+    font-weight: 350;
+    font-size: $btn-fs;
+    line-height: 25px;
+
+    color: $white;
+    cursor: pointer;
+    width: 200px;
+    height: 55px;
+    border: $border;
+    border-radius: $btn-border;
+    background: $item-bg;
+    transition-delay: 1s;
+
+    &:hover {
+      background: $switch-bg-gradient;
+    }
+  }
+
+}
+
+.map_wrapper {
+  width: 100%;
+  height: 600px;
+  background: #1E1E1E;
+  border-radius: $primary-border;
+}
+
+
