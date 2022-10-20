@@ -1,5 +1,6 @@
 @import '../../styles/variables';
 
+$components-color: var(#{--components-background-default});
 $checkbox-size: 65px;
 
 .switch {
@@ -7,7 +8,7 @@ $checkbox-size: 65px;
   vertical-align: text-bottom;
   outline: 0;
   cursor: pointer;
-  box-shadow: inset 0 0 0 1px $item-bg;
+  box-shadow: inset 0 0 0 1px $components-color;
   border-radius: $btn-border;
   border: $border;
   background: $switch-bg-gradient;
@@ -21,22 +22,22 @@ $checkbox-size: 65px;
   width: 140px;
   height: 70px;
   font-size: 60%;
-  box-shadow: inset -#{$checkbox-size} 0 0 #f0f0f0, inset 0 0 0 1px #f0f0f0;
+  box-shadow: inset -#{$checkbox-size} 0 0 $components-color, inset 0 0 0 1px $components-color;
   transition: box-shadow .15s;
   &::before, &::after {
     color: #fff;
     font-weight: bold;
   }
   &::before {
-    content: url("../../../public/assets/icons/dark-theme-btn.svg");
-    margin: 22px 25px 0 0;
+    content: url("../../../public/assets/icons/light-theme-btn.svg");
+    margin: 20px 20px 0 0;
     float: right;
   }
   &:checked {
-    box-shadow: inset #{$checkbox-size} 0 0 $item-bg, inset 0 0 0 1px $item-bg;
+    box-shadow: inset #{$checkbox-size} 0 0 $components-color, inset 0 0 0 1px $components-color;
     &::before {
-      margin: 20px 0 0 20px;
-      content: url("../../../public/assets/icons/light-theme-btn.svg");
+      margin: 22px 0 0 25px;
+      content: url("../../../public/assets/icons/dark-theme-btn.svg");
       float: left;
     }
   }

@@ -22,7 +22,7 @@
 }
 
 .header__icon {
-  background: $item-bg;
+  background: var(#{--components-background-default});
   border-radius: 50%;
   width: 70px;
   height: 70px;

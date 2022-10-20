@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import cl from './Header.module.scss'
 import ThemeSwitcher from "../../components/ThemeSwitcher/ThemeSwitcher";
+import {useTheme} from "../../hooks/useTheme";
+import {Theme} from "../../context/ThemeProvider";
 
 const Header = () => {
+    const theme = useTheme()
+
+    function changeTheme() {
+        theme.changeTheme(theme.theme === Theme.DARK ? Theme.LIGHT : Theme.DARK)
+        console.log(theme.theme)
+    }
+
     return (
         <>
             <div className={cl.header__wrapper}>
@@ -67,7 +76,7 @@ const Header = () => {
                         </div>
                         <input type="text" placeholder="Search"/>
                     </div>
-                    <div className={cl.header__switch_theme}>
+                    <div className={cl.header__switch_theme} onClick={()=>changeTheme()}>
                         <ThemeSwitcher />
                     </div>
                     <div className={cl.header__avatar}>

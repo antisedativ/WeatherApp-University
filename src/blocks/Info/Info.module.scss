@@ -75,14 +75,12 @@
     height: 55px;
     border: $border;
     border-radius: $btn-border;
-    background: $item-bg;
-    transition-delay: 1s;
+    background: var(#{--components-background-default});
 
     &:hover {
       background: $switch-bg-gradient;
     }
   }
-
 }
 
 .map_wrapper {

@@ -24,7 +24,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: $item-bg;
+  background: var(#{--components-background-default});
   -webkit-transition: .4s;
   transition: .4s;
   border: $border;

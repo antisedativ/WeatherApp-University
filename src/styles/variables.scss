@@ -2,13 +2,6 @@
 /* fonts */
 $font: 'Montserrat', sans-serif;
 
-/* colors */
-$main-bg: #101014;
-$item-bg: #1E1E1E;
-
-$white: #fff;
-$black: #000;
-
 /* gradients */
 $switch-bg-gradient: linear-gradient(93.16deg, #31DAFF 0%, #E231FF 97.43%);
 $day-bg-gradient: linear-gradient(180deg, #1B1A1D 29.95%, #3B3A3E 150.81%);
@@ -25,3 +18,30 @@ $card-fs: 24px; // Название дней в карточках
 $btn-fs: 18px; // Переключатели и кнопки
 
 /* shadows */
+
+// #add3ff синий
+// #fafbfd серый
+
+/* colors */
+$main-background-dark: #101014;
+$components-background-dark: #1E1E1E;
+
+$main-background-light: #f9fafc;
+$components-background-light: #d7d2d2;
+
+$white: #fff;
+$black: #000;
+
+/* switch theme */
+
+:root {
+  // main background
+  --main-background-dark: #{$main-background-dark};
+  --main-background-ligth: #{$main-background-light};
+  --main-background-default: var(#{--main-background-dark});
+  // components background
+  --components-background-dark: #{$components-background-dark};
+  --components-background-light: #{$components-background-light};
+  --components-background-default: var(#{--components-background-dark});
+
+}
