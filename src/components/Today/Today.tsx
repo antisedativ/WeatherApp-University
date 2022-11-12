@@ -2,9 +2,13 @@ import React from 'react';
 import cl from './Today.module.scss'
 // @ts-ignore
 import icon from '../../assets/images/weather/20.png'
+import {Weather} from "../../store/types/types";
 
+interface Props {
+    weather: Weather;
+}
 
-const Today = () => {
+const Today = ({weather}:Props) => {
     return (
         <div className={cl.wrapper}>
             <div className={cl.content}>
@@ -15,25 +19,25 @@ const Today = () => {
                 <hr />
                 <div className={cl.content_main}>
                     <div className={cl.temperature}>
-                        16°
+                        {weather.current.temp_c}°
                     </div>
                     <div className={cl.icon}>
-                        <img src={icon} alt=""/>
+                        <img src={weather.current.condition?.icon} alt=""/>
                     </div>
                 </div>
                 <div className={cl.content_bottom}>
                     <div className={cl.real_feel}>
-                        Real Feel 18°
+                        Real Feel {weather.current.feelslike_c}°
                     </div>
                     <div className={cl.wind}>
-                        Wind: N-E, 3-4 km/h
+                        Wind: {weather.current.wind_dir}, {weather.current.wind_kph} km/h
                     </div>
                     <div className={cl.footer}>
                         <div className={cl.pressure}>
-                            Pressure: 1000MB
+                            Pressure: {weather.current.pressure_mb}MB
                         </div>
                         <div className={cl.humidity}>
-                            Humidity: 51%
+                            Humidity: {weather.current.humidity}%
                         </div>
                     </div>
                 </div>

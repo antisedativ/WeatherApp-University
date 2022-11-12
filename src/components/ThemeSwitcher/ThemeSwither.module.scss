@@ -29,15 +29,15 @@ $checkbox-size: 65px;
     font-weight: bold;
   }
   &::before {
-    content: url("../../../public/assets/icons/light-theme-btn.svg");
-    margin: 20px 20px 0 0;
+    content: url("../../../public/assets/icons/dark-theme-btn.svg");
+    margin: 22px 25px 0 0;
     float: right;
   }
   &:checked {
     box-shadow: inset #{$checkbox-size} 0 0 $components-color, inset 0 0 0 1px $components-color;
     &::before {
-      margin: 22px 0 0 25px;
-      content: url("../../../public/assets/icons/dark-theme-btn.svg");
+      margin: 20px 0 0 20px;
+      content: url("../../../public/assets/icons/light-theme-btn.svg");
       float: left;
     }
   }

@@ -9,5 +9,4 @@ export const storage = {
         if(name)
             return JSON.parse(item || '{}')
     }
-
 }
