@@ -1,28 +1,26 @@
 import React from 'react';
 import cl from './Day.module.scss'
-
-// @ts-ignore
-import ico1 from '../../assets/images/weather/16.png'
-import {Data} from "../../blocks/Info/Info";
+import DateConverter from "../../model/DateConverter";
+import {IForecastday} from "../../store/types/types";
 
 interface Props {
-    props: Data
+    day: IForecastday
 }
 
-const Day = (props: Props) => {
-    //console.log(props)
+const Day = ({day}: Props) => {
+
     return (
         <div className={cl.wrapper}>
             <div className={cl.content}>
                 <div className={cl.day}>
-                    {props.props.day}
+                    {DateConverter(day.date)}
                 </div>
                 <hr className={cl.hr} />
                 <div className={cl.icon}>
-                    <img src={props.props.icon} alt=""/>
+                    <img src={day.day.condition?.icon} alt=""/>
                 </div>
                 <div className={cl.degree}>
-                    {props.props.degree}
+                    {day.day.avgtemp_c && Math.ceil(day.day.avgtemp_c)}°
                 </div>
             </div>
         </div>

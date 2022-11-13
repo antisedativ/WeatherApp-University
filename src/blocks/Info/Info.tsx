@@ -1,51 +1,18 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import cl from './Info.module.scss'
 import InfoSwitcher from "../../components/InfoSwitcher/InfoSwitcher";
 import Day from "../../components/Days/Day";
 import Today from "../../components/Today/Today";
 
-// @ts-ignore
-import ico1 from '../../assets/images/weather/16.png'
-// @ts-ignore
-import ico2 from '../../assets/images/weather/10.png'
-// @ts-ignore
-import ico3 from '../../assets/images/weather/22.png'
-// @ts-ignore
-import ico4 from '../../assets/images/weather/26.png'
-import {useCustomDispatch, useCustomSelector} from "../../hooks/storeHooks";
-import {fetchWeather} from "../../store/thunks/fetchWeather";
-
-export type Data = {
-    day: string,
-    icon: any,
-    degree: string
-}
+import {useCustomSelector} from "../../hooks/storeHooks";
 
 const Info = () => {
-
-    const data:Data[] = [
-        {
-            day: 'Mon',
-            icon: ico1,
-            degree: '16°'
-        },
-        {
-            day: 'Tue',
-            icon: ico2,
-            degree: '20°'
-        },
-        {
-            day: 'Wed',
-            icon: ico3,
-            degree: '17°'
-        },
-        {
-            day: 'Thu',
-            icon: ico4,
-            degree: '10°'
-        },
-    ]
     const {weather} = useCustomSelector(state => state.currentWeatherSliceReducer)
+    const forecast = weather.forecast.forecastday
+
+    let newArr = []
+    for (let i = 1; i < forecast.length; i++)
+        newArr.push(forecast[i])
 
     return (
         <div className={cl.wrapper}>
@@ -61,7 +28,7 @@ const Info = () => {
             </div>
             <div className={cl.days}>
                 <Today weather={weather}/>
-                {data.map((data:Data) => (<Day props={data}/>))}
+                {newArr.map((data) => (<Day key={data.date_epoch} day={data}/>))}
             </div>
             <div className={cl.tabs_map} >
                 <div>Global map</div>

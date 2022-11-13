@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Header from "./blocks/Header/Header";
 import './styles/index.scss'
 import Widgets from "./blocks/Widgets/Widgets";

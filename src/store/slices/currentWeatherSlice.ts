@@ -15,13 +15,28 @@ type Response = {
 
 const initialState: CurrentWeather = {
     weather: {
-        current: {},
+        current: {
+            temp_c: 4,
+            wind_kph: 10,
+            feelslike_c: 2
+        },
         location: {
+            country: "Russia",
+            lat: 55.75,
+            localtime: "2022-11-13 3:56",
+            localtime_epoch:1668301016,
+            lon: 37.62,
             name: "Moscow",
-            country: 'Russia'
+            region: "Moscow City",
+            tz_id: "Europe/Moscow",
         },
         forecast: {
-            forecastday: [{}]
+            forecastday: [{
+                date: '',
+                date_epoch: 0,
+                day: {},
+                astro: {},
+            }]
         }
     },
     loading: false,
