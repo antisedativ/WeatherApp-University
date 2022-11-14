@@ -5,6 +5,7 @@ import Day from "../../components/Days/Day";
 import Today from "../../components/Today/Today";
 
 import {useCustomSelector} from "../../hooks/storeHooks";
+import WeatherMap from "../../components/Map/WeatherMap";
 
 const Info = () => {
     const {weather} = useCustomSelector(state => state.currentWeatherSliceReducer)
@@ -35,7 +36,7 @@ const Info = () => {
                 <button className={cl.tabs_map_btn}>View wide</button>
             </div>
             <div className={cl.map_wrapper}>
-                {}
+                <WeatherMap />
             </div>
         </div>
     );

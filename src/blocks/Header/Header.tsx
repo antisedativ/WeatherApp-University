@@ -17,6 +17,15 @@ const Header = () => {
     //     dispatch(fetchWeather('london'))
     // }, [city])
 
+    function validLocation(loc:string) {
+        const words = loc.split(" ");
+        const result = []
+        for (let i = 0; i < words.length; i++) {
+            result.push(words[i][0].toUpperCase())
+        }
+        return(result.join(''))
+    }
+
     function changeTheme() {
         theme.changeTheme(theme.theme === Theme.DARK ? Theme.LIGHT : Theme.DARK)
     }
@@ -67,7 +76,7 @@ const Header = () => {
                     </div>
                     <div className={cl.header__city}>
                         <span>
-                            {location.name}, {location.country}
+                            {location.name}, {location.country.length <= 10 ? location.country : validLocation(location.country)}
                         </span>
                     </div>
                     <div className={cl.header__search}>

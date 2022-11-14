@@ -34,8 +34,22 @@ const initialState: CurrentWeather = {
             forecastday: [{
                 date: '',
                 date_epoch: 0,
-                day: {},
+                day: {
+                    air_quality: {
+                        co: 0,
+                        no2: 0,
+                        so2: 0,
+                    }
+                },
                 astro: {},
+                hour: [{
+                    temp_c: 0,
+                    air_quality: {
+                        co: 0,
+                        no2: 0,
+                        so2: 0,
+                    }
+                }]
             }]
         }
     },
