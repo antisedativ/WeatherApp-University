@@ -35,7 +35,7 @@ const Info = () => {
                 <div>Global map</div>
                 <button className={cl.tabs_map_btn}>View wide</button>
             </div>
-            <div className={cl.map_wrapper}>
+            <div>
                 <WeatherMap />
             </div>
         </div>

@@ -68,7 +68,7 @@ export interface ICurrent {
     temp_c: number;
     temp_f?: number;
     is_day?: number;
-    condition?: ICondition;
+    condition: ICondition;
     wind_mph?: number;
     wind_kph: number;
     wind_degree?: number;
@@ -124,7 +124,7 @@ export interface IAstro {
 
 export interface ICondition {
     text?: string;
-    icon?: string;
+    icon: string;
     code?: number;
 }
 

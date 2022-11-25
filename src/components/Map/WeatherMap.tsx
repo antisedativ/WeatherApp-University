@@ -1,26 +1,43 @@
-import React from 'react';
+import { load } from '@2gis/mapgl';
 import cl from './WeatherMap.module.scss'
-import {YMaps, Map, FullscreenControl, GeolocationControl, ZoomControl} from "react-yandex-maps";
+import {useEffect} from "react";
 import {useCustomSelector} from "../../hooks/storeHooks";
+import Map from "./Map";
 
-const WeatherMap = () => {
+export const WeatherMap = () => {
+    const {location, current} = useCustomSelector(state => state.currentWeatherSliceReducer.weather)
 
-    const {location} = useCustomSelector(state => state.currentWeatherSliceReducer.weather)
+    useEffect(() => {
+        let map: any;
+        load().then((mapglAPI) => {
+            map = new mapglAPI.Map('map-container', {
+                center: [location.lon, location.lat],
+                zoom: 12,
+                key: '7cc45466-1dbe-454b-9727-fbba658c5fa3',
+                style: 'efac10b3-c66c-40de-8165-decca561250c'
+            });
+
+            const marker = new mapglAPI.Marker(map, {
+                coordinates: [location.lon, location.lat],
+                label: {
+                    text: `${current.temp_c}°`,
+                    offset: [0, 25],
+                    relativeAnchor: [0.5, 0],
+                    color: "#fff",
+                },
+            });
+        });
+
+        // Удаляем карту при размонтировании компонента
+        return () => map && map.destroy();
+    }, [location]);
+
     return (
-        <>
-            <YMaps>
-                <div className={cl.wrapper}>
-                    <Map defaultState={{center: [location.lat, location.lon], zoom: 11}}
-                         className={cl.map}
-                    >
-                        <FullscreenControl options={{float: 'left'}} />
-                        <GeolocationControl options={{float: 'right'}}/>
-                        <ZoomControl options={{float: 'left'}}/>
-                    </Map>
-                </div>
-
-            </YMaps>
-        </>
+        <div className={cl.wrapper}>
+            <div className={cl.map}>
+                <Map />
+            </div>
+        </div>
     );
 };
 

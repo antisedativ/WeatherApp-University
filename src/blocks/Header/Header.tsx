@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import cl from './Header.module.scss'
 import ThemeSwitcher from "../../components/ThemeSwitcher/ThemeSwitcher";
 import {useTheme} from "../../hooks/useTheme";
@@ -12,10 +12,6 @@ const Header = () => {
 
     const dispatch = useCustomDispatch()
     const {location} = useCustomSelector(state => state.currentWeatherSliceReducer.weather)
-
-    // useEffect(() => {
-    //     dispatch(fetchWeather('london'))
-    // }, [city])
 
     function validLocation(loc:string) {
         const words = loc.split(" ");

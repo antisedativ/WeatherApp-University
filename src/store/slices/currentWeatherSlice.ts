@@ -18,7 +18,10 @@ const initialState: CurrentWeather = {
         current: {
             temp_c: 4,
             wind_kph: 10,
-            feelslike_c: 2
+            feelslike_c: 2,
+            condition: {
+                icon: '//cdn.weatherapi.com/weather/64x64/night/326.png'
+            }
         },
         location: {
             country: "Russia",

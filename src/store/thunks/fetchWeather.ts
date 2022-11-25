@@ -9,7 +9,7 @@ export const fetchWeather =
     try {
         dispatch(currentWeatherSlice.actions.fetchCurrentWeather);
         const res = await WeatherService.getCurrentWeather(payload);
-        //console.log(res)
+        console.log(res)
         if(res.status === 200) {
             dispatch(currentWeatherSlice.actions.fetchCurrentWeatherSuccess(res));
         } else {
