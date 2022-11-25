@@ -16,7 +16,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 - TypeScript
 - SCSS
-- React
+- React + hooks
 - Redux Toolkit
+- Redux Thunk
 - Axios
 - Nivo
+
+## API
+- 2gis map [Doc](https://docs.2gis.com/ru)
+- WeatherAPI.com [Doc](https://www.weatherapi.com/docs/)
