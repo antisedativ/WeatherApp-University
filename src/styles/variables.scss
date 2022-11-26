@@ -3,9 +3,13 @@
 $font: 'Montserrat', sans-serif;
 
 /* gradients */
-$switch-bg-gradient: linear-gradient(93.16deg, #31DAFF 0%, #E231FF 97.43%);
-$day-bg-gradient: linear-gradient(180deg, #1B1A1D 29.95%, #3B3A3E 150.81%);
-$day-card-gradient: linear-gradient(50deg, #31DAFF 10%, #316BFF, #E231FF 90% );
+$switch-background-gradient-dark: linear-gradient(93.16deg, #31DAFF 0%, #E231FF 97.43%);
+$day-background-gradient-dark: linear-gradient(180deg, #1B1A1D 29.95%, #3B3A3E 150.81%);
+$today-background-gradient-dark: linear-gradient(50deg, #31DAFF 10%, #316BFF, #E231FF 90%);
+
+$switch-background-gradient-light: linear-gradient(90deg, #f598a8, #f6edb2);
+$day-background-gradient-light: linear-gradient(180deg, #FFFAF0 0%, #F0EBE1 100%);
+$today-background-gradient-light: linear-gradient(50deg,#FFFAF0 0%, #f598a8, #f6edb2);
 
 /* borders */
 $btn-border: 100px;
@@ -27,7 +31,7 @@ $main-background-dark: #101014;
 $components-background-dark: #1E1E1E;
 
 $main-background-light: #f9fafc;
-$components-background-light: #d7d2d2;
+$components-background-light: #d3fbfb;
 
 $white: #fff;
 $black: #000;
@@ -37,11 +41,22 @@ $black: #000;
 :root {
   // main background
   --main-background-dark: #{$main-background-dark};
-  --main-background-ligth: #{$main-background-light};
+  --main-background-light: #{$main-background-light};
   --main-background-default: var(#{--main-background-dark});
   // components background
   --components-background-dark: #{$components-background-dark};
   --components-background-light: #{$components-background-light};
   --components-background-default: var(#{--components-background-dark});
-
+  // gradient SWITCH
+  --switch-background-gradient-dark: #{$switch-background-gradient-dark};
+  --switch-background-gradient-light: #{$switch-background-gradient-light};
+  --switch-background-gradient-default: var(#{--switch-background-gradient-dark});
+  // gradient DAY
+  --day-background-gradient-dark: #{$day-background-gradient-dark};
+  --day-background-gradient-light: #{$day-background-gradient-light};
+  --day-background-gradient-default: var(#{--day-background-gradient-dark});
+  // gradient TODAY
+  --today-background-gradient-dark: #{$today-background-gradient-dark};
+  --today-background-gradient-light: #{$today-background-gradient-light};
+  --today-background-gradient-default: var(#{--today-background-gradient-dark});
 }

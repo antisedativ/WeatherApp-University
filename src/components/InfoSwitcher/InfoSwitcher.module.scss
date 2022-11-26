@@ -7,14 +7,11 @@
   width: 260px;
   height: 55px;
   display: block;
-}
+  user-select: none;
 
-.switch input {
-  display: none;
-}
-
-.slider.round {
-  border-radius: $btn-border;
+  & input {
+    display: none;
+  }
 }
 
 .slider {
@@ -28,44 +25,52 @@
   -webkit-transition: .4s;
   transition: .4s;
   border: $border;
+
+  &.round {
+    border-radius: $btn-border;
+  }
+
+  /*Moving Slider Section*/
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+    background: var(#{--switch-background-gradient-default});
+    border-radius: $btn-border;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  /*Slider Text*/
+
+  &_text {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &_text > span {
+    color: $white;
+    font-size: $btn-fs;
+    width: 50%;
+    display: block;
+    float: left;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  & .on {
+    color: $black;
+  }
 }
-/*Moving SLider Section*/
-
-.slider::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 50%;
-  left: 0;
-  bottom: 0;
-  background: $switch-bg-gradient;
-  border-radius: $btn-border;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-/*Slider Text*/
-
-.slider_text {
-  position: absolute;
-  transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
-  font-size: 10px;
-  width: 100%;
-  text-align: center;
-}
-
-.slider_text > span {
-  color: $white;
-  font-size: $btn-fs;
-  width: 50%;
-  display: block;
-  float: left;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
 
 /*Changes on Slide*/
 
@@ -83,6 +88,3 @@ input:checked + .slider .on {
   color: $white;
 }
 
-.slider .slider_text .on {
-  color: $black;
-}

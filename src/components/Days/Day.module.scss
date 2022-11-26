@@ -11,7 +11,7 @@
 .wrapper {
   width: 150px;
   height: 320px;
-  background: $day-bg-gradient;
+  background: var(#{--day-background-gradient-default});
   border: $border;
   border-radius: $primary-border;
   color: $white;

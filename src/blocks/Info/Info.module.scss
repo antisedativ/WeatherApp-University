@@ -78,7 +78,7 @@
     background: var(#{--components-background-default});
 
     &:hover {
-      background: $switch-bg-gradient;
+      background: var(#{--switch-background-gradient-default});
     }
   }
 }

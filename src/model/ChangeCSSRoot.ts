@@ -5,7 +5,10 @@ export const ChangeCSSRoot = (theme: Theme) => {
 
     const components = [
         'components-background',
-        'main-background'
+        'main-background',
+        'switch-background-gradient',
+        'day-background-gradient',
+        'today-background-gradient'
     ]
 
     components.forEach(component => {

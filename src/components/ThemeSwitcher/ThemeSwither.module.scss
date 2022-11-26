@@ -11,7 +11,7 @@ $checkbox-size: 65px;
   box-shadow: inset 0 0 0 1px $components-color;
   border-radius: $btn-border;
   border: $border;
-  background: $switch-bg-gradient;
+  background: var(#{--switch-background-gradient-default});
 
   ~ label {
     cursor: pointer;

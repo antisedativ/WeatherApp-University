@@ -13,7 +13,7 @@ hr {
 .wrapper {
   width: 320px;
   height: 320px;
-  background: $day-card-gradient;
+  background: var(#{--today-background-gradient-default});
   border: $border;
   border-radius: $primary-border;
   color: $white;

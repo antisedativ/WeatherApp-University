@@ -41,7 +41,7 @@
 
   &:hover {
     transition: .4s;
-    background: $switch-bg-gradient;
+    background: var(#{--switch-background-gradient-default});
   }
 
 }
@@ -63,7 +63,7 @@
 
 .header__search input {
   border-radius: $btn-border;
-  background: $day-bg-gradient;
+  background: var(#{--day-background-gradient-default});
   width: 516px;
   height: 70px;
   font-size: 24px;
