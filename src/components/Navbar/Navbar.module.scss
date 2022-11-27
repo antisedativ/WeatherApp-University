@@ -1,0 +1,45 @@
+@import '../../styles/variables';
+
+.wrapper {
+  width: 1160px;
+  margin-right: 90px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  width: 580px;
+  height: 55px;
+
+  display: flex;
+  align-items: end;
+  gap: 1.3rem;
+
+  list-style-type: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 68px;
+}
+
+.list_item {
+  color: $white;
+  cursor: pointer;
+  display: block;
+  opacity: .2;
+  text-decoration: none;
+  &:hover {
+    opacity: 1;
+    transition: .2s;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+}

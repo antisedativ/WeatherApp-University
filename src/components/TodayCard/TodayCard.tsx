@@ -1,5 +1,5 @@
 import React from 'react';
-import cl from './Today.module.scss'
+import cl from './TodayCard.module.scss'
 import DateConverter from "../../model/DateConverter";
 import {Weather} from "../../store/types/types";
 
@@ -7,7 +7,7 @@ interface Props {
     weather: Weather;
 }
 
-const Today = ({weather}:Props) => {
+const TodayCard = ({weather}:Props) => {
 
     const time = weather.location.localtime.split(' ')[1]
 
@@ -48,4 +48,4 @@ const Today = ({weather}:Props) => {
     );
 };
 
-export default Today;
+export default TodayCard;
