@@ -6,6 +6,7 @@ import Today from "./blocks/Today/Today";
 import Tomorrow from "./blocks/Tomorrow/Tomorrow";
 import {Route, Routes} from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./blocks/Footer/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path='/tomorrow' element={<Tomorrow />}/>
             <Route path='/next_days' element={<NextDays />}/>
         </Routes>
+        <Footer />
     </div>
   );
 }
