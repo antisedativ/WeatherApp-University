@@ -5,7 +5,7 @@ import TodayCard from "../TodayCard/TodayCard";
 import {useCustomSelector} from "../../hooks/storeHooks";
 import WeatherMap from "../Map/WeatherMap";
 
-const Info = () => {
+const Info:React.FC = () => {
     const {weather} = useCustomSelector(state => state.currentWeatherSliceReducer)
     const forecast = weather.forecast.forecastday
 

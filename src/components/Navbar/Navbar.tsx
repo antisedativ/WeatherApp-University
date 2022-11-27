@@ -3,8 +3,7 @@ import cl from "./Navbar.module.scss";
 import {NavLink} from "react-router-dom";
 import InfoSwitcher from "../InfoSwitcher/InfoSwitcher";
 
-const Navbar = () => {
-
+const Navbar:React.FC = () => {
     const setActive = ({isActive}:any) => (isActive ? [cl.list_item, cl.active].join(" ") : cl.list_item);
 
     return (

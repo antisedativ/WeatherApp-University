@@ -1,7 +1,7 @@
 import React from 'react';
 import cl from './InfoSwitcher.module.scss'
 
-const InfoSwitcher = () => {
+const InfoSwitcher:React.FC = () => {
     return (
         <div className={cl.container}>
             <label className={cl.switch}>

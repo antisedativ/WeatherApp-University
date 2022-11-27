@@ -1,10 +1,10 @@
 import { load } from '@2gis/mapgl';
 import cl from './WeatherMap.module.scss'
-import {useEffect} from "react";
+import React, {useEffect} from "react";
 import {useCustomSelector} from "../../hooks/storeHooks";
 import Map from "./Map";
 
-export const WeatherMap = () => {
+export const WeatherMap:React.FC = () => {
     // const {location, current} = useCustomSelector(state => state.currentWeatherSliceReducer.weather)
     //
     // useEffect(() => {

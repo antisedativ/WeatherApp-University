@@ -7,8 +7,7 @@ interface Props {
     weather: Weather;
 }
 
-const TodayCard = ({weather}:Props) => {
-
+const TodayCard:React.FC<Props> = ({weather}) => {
     const time = weather.location.localtime.split(' ')[1]
 
     return (

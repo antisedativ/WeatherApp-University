@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Tomorrow = () => {
+const Tomorrow:React.FC = () => {
     return (
         <div>
             <h1>Tomorrow</h1>

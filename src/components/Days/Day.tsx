@@ -7,7 +7,7 @@ interface Props {
     day: IForecastday
 }
 
-const Day = ({day}: Props) => {
+const Day:React.FC<Props> = ({day}) => {
 
     return (
         <div className={cl.wrapper}>

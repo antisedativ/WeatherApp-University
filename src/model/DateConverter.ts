@@ -1,5 +1,4 @@
 
-
 export default function DateConverter (day: string):string {
     const days = [
         'Sun',

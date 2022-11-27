@@ -6,7 +6,7 @@ import {Theme} from "../../context/ThemeProvider";
 import {useCustomDispatch, useCustomSelector} from "../../hooks/storeHooks";
 import {fetchWeather} from "../../store/thunks/fetchWeather";
 
-const Header = () => {
+const Header:React.FC = () => {
     const theme = useTheme()
     const [city, setCity] = useState('')
 

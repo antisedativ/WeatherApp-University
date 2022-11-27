@@ -6,8 +6,7 @@ import { ResponsivePie } from '@nivo/pie'
 import {useCustomSelector} from "../../hooks/storeHooks";
 import DateConverter from "../../model/DateConverter";
 
-const Widgets = () => {
-
+const Widgets:React.FC = () => {
     const {forecast} = useCustomSelector(state => state.currentWeatherSliceReducer.weather)
     console.log(forecast.forecastday)
     const weather = forecast.forecastday
