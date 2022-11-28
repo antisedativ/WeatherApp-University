@@ -2,6 +2,11 @@
 
 $padding: 0 25px;
 
+%display_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 hr {
   border: .5px solid rgba(255, 255, 255, 0.2);
   width: 265px;
@@ -12,7 +17,7 @@ hr {
 
 .wrapper {
   width: 320px;
-  height: 320px;
+  height: 340px;
   background: var(#{--today-background-gradient-default});
   border: $border;
   border-radius: $primary-border;
@@ -25,8 +30,7 @@ hr {
 }
 
 .content_top {
-  display: flex;
-  justify-content: space-between;
+  @extend %display_flex;
   align-items: center;
 
   font-style: normal;
@@ -37,8 +41,7 @@ hr {
 }
 
 .content_main {
-  display: flex;
-  justify-content: space-between;
+  @extend %display_flex;
   margin-top: 20px;
   padding: $padding;
 
@@ -63,8 +66,7 @@ hr {
   line-height: 25px;
 
   .footer {
-    display: flex;
-    justify-content: space-between;
+    @extend %display_flex;
   }
 }
 

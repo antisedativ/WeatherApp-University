@@ -1,26 +1,28 @@
 @import '../../styles/variables';
 
+%display_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 .wrapper {
   width: 1160px;
-  height: 700px;
   margin-right: 90px;
 }
 
 .days {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 70px;
+  @extend %display_flex;
+  margin-bottom: 40px;
 }
 
 .tabs_map {
-  display: flex;
-  justify-content: space-between;
+  @extend %display_flex;
   color: $white;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
   line-height: 35px;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 
   .tabs_map_btn {
     font-style: normal;

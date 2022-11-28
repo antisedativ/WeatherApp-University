@@ -81,7 +81,7 @@ const Widgets:React.FC = () => {
                     endAngle={90}
                     padding={0.4}
                     cornerRadius={2}
-                    margin={{ top: 0, right: 25, bottom: 0, left: 25 }}
+                    margin={{ top: 25, right: 25, bottom: 0, left: 25 }}
                     colors={{ scheme: 'purpleRed_green' }}
                     borderWidth={1}
                     borderColor={{
@@ -136,7 +136,7 @@ const Widgets:React.FC = () => {
                 <div style={{height: 300}}>
                     <ResponsivePie
                         data={PieData}
-                        margin={{ top: 10, right: 30, bottom: 20, left: 30 }}
+                        margin={{ top: 5, right: 30, bottom: 40, left: 30 }}
                         innerRadius={0.6}
                         activeOuterRadiusOffset={8}
                         colors={{ scheme: 'pink_yellowGreen' }}
@@ -164,7 +164,7 @@ const Widgets:React.FC = () => {
                                 justify: false,
                                 translateX: 0,
                                 translateY: 0,
-                                itemWidth: 100,
+                                itemWidth: 60,
                                 itemHeight: 20,
                                 itemsSpacing: 0,
                                 symbolSize: 20,

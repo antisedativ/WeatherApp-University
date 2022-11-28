@@ -1,5 +1,11 @@
 @import '../../styles/variables';
 
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
 /*Switch*/
 
 .switch {
@@ -75,9 +81,7 @@
 /*Changes on Slide*/
 
 input:checked + .slider::before {
-  -webkit-transform: translateX(130px);
-  -ms-transform: translateX(130px);
-  transform: translateX(130px);
+  @include transform(translateX(130px));
 }
 
 input:checked + .slider .off {

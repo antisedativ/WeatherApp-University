@@ -24,7 +24,7 @@ const Info:React.FC = () => {
                 <button className={cl.tabs_map_btn}>View wide</button>
             </div>
             <div>
-                {/*<WeatherMap />*/}
+                <WeatherMap />
             </div>
         </div>
     );

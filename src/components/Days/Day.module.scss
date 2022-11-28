@@ -1,5 +1,7 @@
 @import '../../styles/variables';
 
+$line_height: 68px;
+
 .hr {
   border: .2px solid #545353;;
   width: 100px;
@@ -10,7 +12,7 @@
 
 .wrapper {
   width: 150px;
-  height: 320px;
+  height: 340px;
   background: var(#{--day-background-gradient-default});
   border: $border;
   border-radius: $primary-border;
@@ -29,7 +31,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: $card-fs;
-  line-height: 68px;
+  line-height: $line_height;
 }
 
 .icon img {
@@ -42,5 +44,5 @@
   font-style: normal;
   font-weight: 500;
   font-size: 50px;
-  line-height: 68px;
+  line-height: $line_height;
 }

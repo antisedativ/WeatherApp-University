@@ -1,12 +1,14 @@
 @import '../../styles/variables';
 
+$size: 70px;
+
 .header__wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 47px;
-  margin-bottom: 70px;
+  margin-bottom: $size;
 }
 
 .header__content {
@@ -24,8 +26,8 @@
 .header__icon {
   background: var(#{--components-background-default});
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: $size;
+  height: $size;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border: $border;
   cursor: pointer;
@@ -65,7 +67,7 @@
   border-radius: $btn-border;
   background: var(#{--day-background-gradient-default});
   width: 516px;
-  height: 70px;
+  height: $size;
   font-size: 24px;
   border: $border;
   padding-left: 20px;
@@ -75,7 +77,7 @@
 
 .header__icon_search {
   width: 50px;
-  height: 70px;
+  height: $size;
   position: absolute;
   left: 1095px;
   cursor: pointer;
@@ -86,13 +88,9 @@
   }
 }
 
-.header__switch_theme {
-
-}
-
 .header__avatar {
-  width: 70px;
-  height: 70px;
+  width: $size;
+  height: $size;
   cursor: pointer;
   background-image: url("../../../public/assets/icons/avatar.png");
 }
