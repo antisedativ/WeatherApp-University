@@ -10,7 +10,7 @@ const Navbar:React.FC = () => {
         <div className={cl.wrapper}>
             <div className={cl.tabs}>
                 <ul className={cl.list}>
-                    <NavLink to='/' className={setActive}>Today</NavLink>
+                    <NavLink to='/today' className={setActive}>Today</NavLink>
                     <NavLink to='/tomorrow' className={setActive}>Tomorrow</NavLink>
                     <NavLink to='/next_days' className={setActive}>Next 5 days</NavLink>
                 </ul>

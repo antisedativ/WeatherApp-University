@@ -14,7 +14,7 @@ function App() {
         <Header/>
         <Navbar />
         <Routes>
-            <Route path='/' element={<Today />}/>
+            <Route path='/today' element={<Today />}/>
             <Route path='/tomorrow' element={<Tomorrow />}/>
             <Route path='/next_days' element={<NextDays />}/>
         </Routes>
