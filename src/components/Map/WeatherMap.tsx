@@ -4,6 +4,8 @@ import React, {useEffect} from "react";
 import {useCustomSelector} from "../../hooks/storeHooks";
 import Map from "./Map";
 
+import {mapKey} from "../../services/keys";
+
 export const WeatherMap:React.FC = () => {
     // const {location, current} = useCustomSelector(state => state.currentWeatherSliceReducer.weather)
     //
@@ -13,7 +15,7 @@ export const WeatherMap:React.FC = () => {
     //         map = new mapglAPI.Map('map-container', {
     //             center: [location.lon, location.lat],
     //             zoom: 12,
-    //             key: '7cc45466-1dbe-454b-9727-fbba658c5fa3',
+    //             key: `${mapKey}`,
     //             style: 'efac10b3-c66c-40de-8165-decca561250c'
     //         });
     //
