@@ -8,8 +8,7 @@ interface Props {
 }
 
 const Hour:React.FC<Props> = ({hour}) => {
-    console.log(hour)
-    const [date, time] = DateConverter(hour.time || '')
+    const [time] = DateConverter(hour.time || '')
     return (
         <div className={cl.wrapper}>
             <div className={cl.content}>
