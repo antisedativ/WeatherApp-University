@@ -1,14 +1,13 @@
 import React from 'react';
 import cl from './Day.module.scss'
 import DateConverter from "../../model/DateConverter";
-import {IForecastday} from "../../store/types/types";
+import {IForecastday} from "../../store/types/APItypes";
 
 interface Props {
     day: IForecastday
 }
 
 const Day:React.FC<Props> = ({day}) => {
-
     return (
         <div className={cl.wrapper}>
             <div className={cl.content}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import cl from './Info.module.scss'
-import Day from "../Days/Day";
+import Day from "../Day/Day";
 import TodayCard from "../TodayCard/TodayCard";
 import {useCustomSelector} from "../../hooks/storeHooks";
 import WeatherMap from "../Map/WeatherMap";

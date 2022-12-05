@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {Weather} from "../types/types";
+import {Weather} from "../types/APItypes";
 import {AxiosResponse} from "axios";
 
 type CurrentWeather = {

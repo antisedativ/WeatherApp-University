@@ -1,7 +1,7 @@
 import React from 'react';
 import cl from './TodayCard.module.scss'
 import DateConverter from "../../model/DateConverter";
-import {Weather} from "../../store/types/types";
+import {Weather} from "../../store/types/APItypes";
 
 interface Props {
     weather: Weather;

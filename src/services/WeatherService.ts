@@ -1,5 +1,5 @@
 import axios, {AxiosResponse} from 'axios'
-import {Weather} from "../store/types/types";
+import {Weather} from "../store/types/APItypes";
 
 import {weatherKey} from "./keys";
 
