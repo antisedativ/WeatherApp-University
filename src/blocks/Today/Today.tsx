@@ -9,14 +9,12 @@ import Hour from "../../components/Hour/Hour";
 const Today:React.FC = () => {
     const { current, location, forecast } = useCustomSelector(state => state.currentWeatherSliceReducer.weather)
 
-    const time = location.localtime.split(' ')[1]
+    const [date, time] = DateConverter(location.localtime)
+
     const hours:IHour[] = []
     for (let i = 0; i < forecast.forecastday[0].hour.length; i+=4) {
         hours.push(forecast.forecastday[0].hour[i])
     }
-
-    console.log(current)
-    // console.log(forecast)
     return (
         <div className={cl.wrapper}>
             <div style={{display: "flex", flexDirection: "column"}}>
@@ -24,7 +22,7 @@ const Today:React.FC = () => {
                     <div className={cl.content}>
                         <div>
                             <div className={cl.content_top}>
-                                <div>Sunday</div>
+                                <div>{date}</div>
                                 <div className={cl.time}>{time}</div>
                             </div>
                             <div className={cl.content_main}>

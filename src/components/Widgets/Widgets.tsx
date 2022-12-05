@@ -18,7 +18,7 @@ const Widgets:React.FC = () => {
     for (let i = 1; i < weather.length; i++) {
         BumpData.push(
             {
-                "id": DateConverter(weather[i].date),
+                "id": DateConverter(weather[i].date)[0],
                 "data": [
                     {
                         "x": '03:00',
@@ -41,7 +41,7 @@ const Widgets:React.FC = () => {
         )
         PieData.push(
             {
-                "id": DateConverter(weather[i].date),
+                "id": DateConverter(weather[i].date)[0],
                 "label": DateConverter(weather[i].date),
                 "value": weather[i].day.uv,
                 "color": `hsl(${56+i*10}, 70%, 50%)`
@@ -51,7 +51,7 @@ const Widgets:React.FC = () => {
     for (let i = 0; i < weather.length-2; i++) {
         RadialBarData.push(
             {
-                "id": DateConverter(weather[i].date),
+                "id": DateConverter(weather[i].date)[0],
                 "data": [
                     {
                         "x": "CO",

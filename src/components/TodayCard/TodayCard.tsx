@@ -8,13 +8,14 @@ interface Props {
 }
 
 const TodayCard:React.FC<Props> = ({weather}) => {
-    const time = weather.location.localtime.split(' ')[1]
+    //const time = weather.location.localtime.split(' ')[1]
+    const [date, time] = DateConverter(weather.location.localtime)
 
     return (
         <div className={cl.wrapper}>
             <div className={cl.content}>
                 <div className={cl.content_top}>
-                    <div>{DateConverter(weather.location.localtime)}</div>
+                    <div>{date}</div>
                     <div>{time}</div>
                 </div>
                 <hr/>

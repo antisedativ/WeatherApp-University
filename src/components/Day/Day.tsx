@@ -12,7 +12,7 @@ const Day:React.FC<Props> = ({day}) => {
         <div className={cl.wrapper}>
             <div className={cl.content}>
                 <div className={cl.day}>
-                    {DateConverter(day.date)}
+                    {DateConverter(day.date)[0].substr(0, 3)}
                 </div>
                 <hr className={cl.hr} />
                 <div className={cl.icon}>
