@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@2gis/mapgl": "^1.32.0",
+    "@nivo/bar": "^0.80.0",
     "@nivo/bump": "^0.80.0",
     "@nivo/core": "^0.80.0",
     "@nivo/pie": "^0.80.0",

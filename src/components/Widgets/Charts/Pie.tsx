@@ -10,6 +10,7 @@ const Pie = ({data}:any) => {
                 <ResponsivePie
                     data={data}
                     margin={{ top: 5, right: 30, bottom: 40, left: 30 }}
+                    valueFormat=" >+"
                     innerRadius={0.6}
                     activeOuterRadiusOffset={8}
                     colors={{ scheme: 'pink_yellowGreen' }}

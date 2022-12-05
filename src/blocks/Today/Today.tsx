@@ -2,19 +2,41 @@ import React from 'react';
 import cl from './Today.module.scss';
 import {useCustomSelector} from "../../hooks/storeHooks";
 import DateConverter from "../../model/DateConverter";
-import Widgets from "../../components/Widgets/Widgets";
 import {IHour} from '../../store/types/APItypes';
 import Hour from "../../components/Hour/Hour";
+import Bump from "../../components/Widgets/Charts/Bump";
+import RadialBar from "../../components/Widgets/Charts/RadialBar";
+import Pie from "../../components/Widgets/Charts/Pie";
+import Bar from "../../components/Widgets/Charts/Bar";
 
 const Today:React.FC = () => {
     const { current, location, forecast } = useCustomSelector(state => state.currentWeatherSliceReducer.weather)
 
     const [date, time] = DateConverter(location.localtime)
 
+    const tempBar = []
+    const windBar = []
     const hours:IHour[] = []
     for (let i = 0; i < forecast.forecastday[0].hour.length; i+=4) {
-        hours.push(forecast.forecastday[0].hour[i])
+        let weather = forecast.forecastday[0].hour[i]
+        hours.push(weather)
+        console.log((weather))
+
+        tempBar.push(
+            {
+                ranking: DateConverter(weather.time || '')[1],
+                value: Math.ceil(weather.temp_c)
+            },
+        )
+
+        windBar.push(
+            {
+                ranking: DateConverter(weather.time || '')[1],
+                value: Math.ceil(weather.wind_kph || 0)
+            },
+        )
     }
+
     return (
         <div className={cl.wrapper}>
             <div style={{display: "flex", flexDirection: "column"}}>
@@ -59,7 +81,10 @@ const Today:React.FC = () => {
                     {hours.map(hour => <Hour key={hour.time_epoch} hour={hour}/>)}
                 </div>
             </div>
-            <Widgets />
+            <div className={cl.charts}>
+                <Bar data={tempBar} title={'Temperature C°'} color={'#DA70D6'}/>
+                <Bar data={windBar} title={'Wind kph'} color={'#9932CC'}/>
+            </div>
         </div>
     );
 };
