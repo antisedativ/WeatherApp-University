@@ -1,17 +1,6 @@
 
 export default function DateConverter (day: string):string[] {
     const time = day.split(' ')[1]
-
-    // const shortDays = [
-    //     'Sun',
-    //     'Mon',
-    //     'Tue',
-    //     'Wed',
-    //     'Thur',
-    //     'Fri',
-    //     'Sat'
-    // ];
-
     const days = [
         'Sunday',
         'Monday',
@@ -21,7 +10,6 @@ export default function DateConverter (day: string):string[] {
         'Friday',
         'Saturday'
     ];
-
 
     let date = new Date(day);
     let n = date.getDay();
