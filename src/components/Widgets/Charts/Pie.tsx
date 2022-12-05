@@ -2,7 +2,7 @@ import React from 'react';
 import cl from "../Widgets.module.scss";
 import {ResponsivePie} from "@nivo/pie";
 
-const Pie = ({data}:any) => {
+const Pie:React.FC<any> = ({data}) => {
     return (
         <div className={cl.chart}>
             <h3>UV Index</h3>

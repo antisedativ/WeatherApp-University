@@ -2,7 +2,7 @@ import React from 'react';
 import cl from "../Widgets.module.scss";
 import {ResponsiveBump} from "@nivo/bump";
 
-const Bump = ({data}:any) => {
+const Bump:React.FC<any> = ({data}) => {
     return (
         <div className={cl.chart}>
             <h3>Temperature for 5 days</h3>

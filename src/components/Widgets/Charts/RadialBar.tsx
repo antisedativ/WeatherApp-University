@@ -2,7 +2,7 @@ import React from 'react';
 import cl from "../Widgets.module.scss";
 import {ResponsiveRadialBar} from "@nivo/radial-bar";
 
-const RadialBar = ({data}:any) => {
+const RadialBar:React.FC<any> = ({data}) => {
     return (
         <div className={cl.chart}>
             <h3>Air quality</h3>
