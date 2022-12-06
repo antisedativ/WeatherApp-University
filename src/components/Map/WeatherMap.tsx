@@ -37,7 +37,7 @@ export const WeatherMap:React.FC = () => {
     return (
         <div className={cl.wrapper}>
             <div className={cl.map}>
-                <Map />
+                {/*<Map />*/}
             </div>
         </div>
     );
