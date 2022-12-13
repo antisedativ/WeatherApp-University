@@ -53,15 +53,15 @@ const Widgets:React.FC = () => {
                 "data": [
                     {
                         "x": "CO",
-                        "y": Math.ceil(weather[i].day.air_quality.co)
+                        "y": Math.ceil(weather[i].day.avgtemp_c)
                     },
                     {
                         "x": "NO2",
-                        "y": Math.ceil(weather[i].day.air_quality.no2)
+                        "y": Math.ceil(weather[i].day.avgtemp_c)
                     },
                     {
                         "x": "SO2",
-                        "y": Math.ceil(weather[i].day.air_quality.so2)
+                        "y": Math.ceil(weather[i].day.avgtemp_c)
                     }
                 ]
             }

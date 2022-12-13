@@ -4,9 +4,6 @@ import {useCustomSelector} from "../../hooks/storeHooks";
 import DateConverter from "../../model/DateConverter";
 import {IHour} from '../../store/types/APItypes';
 import Hour from "../../components/Hour/Hour";
-import Bump from "../../components/Widgets/Charts/Bump";
-import RadialBar from "../../components/Widgets/Charts/RadialBar";
-import Pie from "../../components/Widgets/Charts/Pie";
 import Bar from "../../components/Widgets/Charts/Bar";
 
 const Today:React.FC = () => {

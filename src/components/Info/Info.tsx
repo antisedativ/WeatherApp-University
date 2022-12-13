@@ -6,12 +6,14 @@ import {useCustomSelector} from "../../hooks/storeHooks";
 import WeatherMap from "../Map/WeatherMap";
 
 const Info:React.FC = () => {
-    const {weather} = useCustomSelector(state => state.currentWeatherSliceReducer)
+    const weather = useCustomSelector(state => state.currentWeatherSliceReducer.weather)
     const forecast = weather.forecast.forecastday
 
     let days = []
-    for (let i = 1; i < forecast.length; i++)
+    for (let i = 1; i < forecast.length; i++) {
+
         days.push(forecast[i])
+    }
 
     return (
         <div className={cl.wrapper}>

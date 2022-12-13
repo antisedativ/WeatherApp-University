@@ -10,7 +10,7 @@ const Pie:React.FC<any> = ({data}) => {
                 <ResponsivePie
                     data={data}
                     margin={{ top: 5, right: 30, bottom: 40, left: 30 }}
-                    valueFormat=" >+"
+                    valueFormat=" >"
                     innerRadius={0.6}
                     activeOuterRadiusOffset={8}
                     colors={{ scheme: 'pink_yellowGreen' }}

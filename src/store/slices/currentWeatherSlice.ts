@@ -1,6 +1,7 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {Weather} from "../types/APItypes";
 import {AxiosResponse} from "axios";
+import {initial} from "./initialState";
 
 type CurrentWeather = {
     weather: Weather,
@@ -14,48 +15,7 @@ type Response = {
 }
 
 const initialState: CurrentWeather = {
-    weather: {
-        current: {
-            temp_c: 4,
-            wind_kph: 10,
-            feelslike_c: 2,
-            condition: {
-                icon: '//cdn.weatherapi.com/weather/64x64/night/326.png'
-            }
-        },
-        location: {
-            country: "Russia",
-            lat: 55.75,
-            localtime: "2022-11-13 3:56",
-            localtime_epoch:1668301016,
-            lon: 37.62,
-            name: "Moscow",
-            region: "Moscow City",
-            tz_id: "Europe/Moscow",
-        },
-        forecast: {
-            forecastday: [{
-                date: '',
-                date_epoch: 0,
-                day: {
-                    air_quality: {
-                        co: 0,
-                        no2: 0,
-                        so2: 0,
-                    }
-                },
-                astro: {},
-                hour: [{
-                    temp_c: 0,
-                    air_quality: {
-                        co: 0,
-                        no2: 0,
-                        so2: 0,
-                    }
-                }]
-            }]
-        }
-    },
+    weather: initial,
     loading: false,
     response: {
         status: 0,
