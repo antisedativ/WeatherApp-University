@@ -33,10 +33,10 @@ const Header:React.FC = () => {
 
     return (
         <>
-            <div className={cl.header__wrapper}>
-                <div className={cl.header__content}>
-                    <div className={cl.header__icons_wrapper}>
-                        <div className={cl.header__icon}>
+            <div className={cl.wrapper}>
+                <div className={cl.content}>
+                    <div className={cl.icons_wrapper}>
+                        <div className={cl.icon}>
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_222_100)" filter="url(#filter0_d_222_100)">
                                     <path d="M11 0H8C5.79086 0 4 1.79086 4 4V7C4 9.20914 5.79086 11 8 11H11C13.2091 11 15 9.20914 15 7V4C15 1.79086 13.2091 0 11 0Z" fill="white"/>
@@ -61,7 +61,7 @@ const Header:React.FC = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className={cl.header__icon}>
+                        <div className={cl.icon}>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_222_92)">
                                     <path d="M7.42383 21C7.81149 21.8914 8.45106 22.6502 9.26398 23.1831C10.0769 23.716 11.0278 23.9999 11.9998 23.9999C12.9719 23.9999 13.9228 23.716 14.7357 23.1831C15.5486 22.6502 16.1882 21.8914 16.5758 21H7.42383Z" fill="white"/>
@@ -75,13 +75,13 @@ const Header:React.FC = () => {
                             </svg>
                         </div>
                     </div>
-                    <div className={cl.header__city}>
+                    <div className={cl.city}>
                         <span>
                             {location.name}, {location.country.length <= 10 ? location.country : validLocation(location.country)}
                         </span>
                     </div>
-                    <div className={cl.header__search}>
-                        <div className={cl.header__icon_search} onClick={getWeather}>
+                    <div className={cl.search}>
+                        <div className={cl.icon_search} onClick={getWeather}>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_222_22)">
                                     <path d="M23.7068 22.2938L17.7378 16.3248C19.3644 14.3354 20.1642 11.7969 19.9716 9.23432C19.7791 6.67179 18.609 4.28129 16.7034 2.55728C14.7977 0.833269 12.3024 -0.0923492 9.73342 -0.0281174C7.16447 0.0361144 4.71849 1.08528 2.9014 2.90237C1.08431 4.71946 0.0351379 7.16545 -0.029094 9.7344C-0.0933258 12.3034 0.832293 14.7987 2.5563 16.7043C4.28031 18.61 6.67081 19.7801 9.23334 19.9726C11.7959 20.1651 14.3344 19.3654 16.3238 17.7388L22.2928 23.7078C22.4814 23.8899 22.734 23.9907 22.9962 23.9884C23.2584 23.9862 23.5092 23.881 23.6946 23.6956C23.88 23.5102 23.9852 23.2594 23.9875 22.9972C23.9897 22.735 23.8889 22.4824 23.7068 22.2938ZM9.99978 18.0008C8.41753 18.0008 6.87081 17.5316 5.55522 16.6525C4.23963 15.7735 3.21425 14.524 2.60875 13.0622C2.00324 11.6004 1.84482 9.99189 2.1535 8.44004C2.46218 6.88819 3.22411 5.46272 4.34293 4.3439C5.46175 3.22508 6.88721 2.46316 8.43906 2.15448C9.99091 1.84579 11.5994 2.00422 13.0613 2.60972C14.5231 3.21522 15.7725 4.2406 16.6515 5.5562C17.5306 6.87179 17.9998 8.41851 17.9998 10.0008C17.9974 12.1218 17.1538 14.1552 15.654 15.655C14.1542 17.1548 12.1208 17.9984 9.99978 18.0008Z" fill="white"/>
@@ -95,10 +95,10 @@ const Header:React.FC = () => {
                         </div>
                         <input type="text" placeholder="Search" value={city} onChange={(e) => setCity(e.target.value)}/>
                     </div>
-                    <div className={cl.header__switch_theme} onClick={()=>changeTheme()}>
+                    <div className={cl.switch_theme} onClick={()=>changeTheme()}>
                         <ThemeSwitcher />
                     </div>
-                    <div className={cl.header__avatar}>
+                    <div className={cl.avatar}>
                     </div>
                 </div>
             </div>

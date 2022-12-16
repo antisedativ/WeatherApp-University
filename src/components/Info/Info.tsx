@@ -11,7 +11,6 @@ const Info:React.FC = () => {
 
     let days = []
     for (let i = 1; i < forecast.length; i++) {
-
         days.push(forecast[i])
     }
 
@@ -19,7 +18,7 @@ const Info:React.FC = () => {
         <div className={cl.wrapper}>
             <div className={cl.days}>
                 <TodayCard weather={weather}/>
-                {days.map((data) => (<Day key={data.date_epoch} day={data}/>))}
+                {days.map((data) => (<Day key={data.date} day={data}/>))}
             </div>
             <div className={cl.tabs_map} >
                 <div>Global map</div>

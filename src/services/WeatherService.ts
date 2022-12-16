@@ -1,6 +1,5 @@
 import axios, {AxiosResponse} from 'axios'
 import {Weather} from "../store/types/APItypes";
-
 import {weatherKey} from "./keys";
 
 export class WeatherService {

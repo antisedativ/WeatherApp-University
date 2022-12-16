@@ -7,8 +7,10 @@ const InfoSwitcher:React.FC = () => {
             <label className={cl.switch}>
                 <input type="checkbox" id="toggle_vat" className={cl.toggle_vat}/>
                     <div className={[cl.round, cl.slider].join(' ')}>
-                        <span className={cl.slider_text}><span className={cl.off}>Forecast</span><span
-                            className="on">Air quality</span></span>
+                        <span className={cl.slider_text}>
+                            <span className={cl.off}>Forecast</span>
+                            <span className={cl.off}>Air quality</span>
+                        </span>
                     </div>
             </label>
         </div>

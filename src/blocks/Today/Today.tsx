@@ -17,15 +17,12 @@ const Today:React.FC = () => {
     for (let i = 0; i < forecast.forecastday[0].hour.length; i+=4) {
         let weather = forecast.forecastday[0].hour[i]
         hours.push(weather)
-        console.log((weather))
-
         tempBar.push(
             {
                 ranking: DateConverter(weather.time || '')[1],
                 value: Math.ceil(weather.temp_c)
             },
         )
-
         windBar.push(
             {
                 ranking: DateConverter(weather.time || '')[1],

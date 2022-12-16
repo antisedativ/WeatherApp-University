@@ -20,7 +20,7 @@ const Hour:React.FC<Props> = ({hour}) => {
                     <img src={hour.condition?.icon} alt=""/>
                 </div>
                 <div className={cl.degree}>
-                    {hour.dewpoint_c && Math.ceil(hour.dewpoint_c)}°
+                    {Math.ceil(hour.dewpoint_c)}°
                 </div>
             </div>
         </div>

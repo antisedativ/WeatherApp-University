@@ -7,7 +7,7 @@ import Bump from "./Charts/Bump";
 import Pie from "./Charts/Pie";
 
 const Widgets:React.FC = () => {
-    const {forecast} = useCustomSelector(state => state.currentWeatherSliceReducer.weather)
+    const forecast = useCustomSelector(state => state.currentWeatherSliceReducer.weather.forecast)
     const weather = forecast.forecastday
 
     const BumpData = []

@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from "./blocks/Header/Header";
-import './styles/index.scss'
 import NextDays from "./blocks/NextDays/NextDays";
 import Today from "./blocks/Today/Today";
 import Tomorrow from "./blocks/Tomorrow/Tomorrow";
 import {Route, Routes} from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./blocks/Footer/Footer";
+
+import './styles/index.scss'
 
 function App() {
   return (

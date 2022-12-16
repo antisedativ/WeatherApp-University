@@ -2,7 +2,7 @@
 
 $size: 70px;
 
-.header__wrapper {
+.wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -11,19 +11,19 @@ $size: 70px;
   margin-bottom: $size;
 }
 
-.header__content {
+.content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.header__icons_wrapper {
+.icons_wrapper {
   display: flex;
   flex-direction: row;
 }
 
-.header__icon {
+.icon {
   background: var(#{--components-background-default});
   border-radius: 50%;
   width: $size;
@@ -48,7 +48,7 @@ $size: 70px;
 
 }
 
-.header__city {
+.city {
   min-width: 235px;
   color: $white;
   cursor: pointer;
@@ -63,7 +63,7 @@ $size: 70px;
   }
 }
 
-.header__search input {
+.search input {
   border-radius: $btn-border;
   background: var(#{--day-background-gradient-default});
   width: 516px;
@@ -75,7 +75,7 @@ $size: 70px;
   color: $white;
 }
 
-.header__icon_search {
+.icon_search {
   width: 50px;
   height: $size;
   position: absolute;
@@ -88,7 +88,7 @@ $size: 70px;
   }
 }
 
-.header__avatar {
+.avatar {
   width: $size;
   height: $size;
   cursor: pointer;

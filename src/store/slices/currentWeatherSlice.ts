@@ -1,7 +1,7 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {Weather} from "../types/APItypes";
 import {AxiosResponse} from "axios";
-import {initial} from "./initialState";
+import {initial} from "../initialState";
 
 type CurrentWeather = {
     weather: Weather,

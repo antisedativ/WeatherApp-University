@@ -16,10 +16,10 @@ const Day:React.FC<Props> = ({day}) => {
                 </div>
                 <hr className={cl.hr} />
                 <div className={cl.icon}>
-                    <img src={day.day.condition?.icon} alt=""/>
+                    <img src={day.day.condition.icon} alt="icon"/>
                 </div>
                 <div className={cl.degree}>
-                    {day.day.avgtemp_c && Math.ceil(day.day.avgtemp_c)}°
+                    {Math.ceil(day.day.avgtemp_c)}°
                 </div>
             </div>
         </div>

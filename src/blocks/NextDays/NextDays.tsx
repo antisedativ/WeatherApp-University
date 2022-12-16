@@ -5,8 +5,8 @@ import Widgets from "../../components/Widgets/Widgets";
 const NextDays:React.FC = () => {
     return (
         <div className="content">
-            <Info />
-            <Widgets />
+            <Info/>
+            <Widgets/>
         </div>
     );
 };
