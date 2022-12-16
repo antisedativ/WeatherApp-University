@@ -22,6 +22,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - Redux Thunk
 - Axios
 - Nivo
+- Formik / Yup
 
 ## API
 - 2gis map [Doc](https://docs.2gis.com/ru)
