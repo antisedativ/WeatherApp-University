@@ -1,0 +1,40 @@
+@import 'src/styles/variables';
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search {
+  border-radius: $btn-border;
+  background: var(#{--day-background-gradient-default});
+  width: 516px;
+  height: 70px;
+  font-size: 24px;
+  border: $border;
+  padding-left: 20px;
+  margin-right: 40px;
+  color: $white;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.icon_search {
+  @include button-reset;
+  width: 50px;
+  height: 70px;
+  position: absolute;
+  left: 1095px;
+  cursor: pointer;
+
+  & svg {
+    margin:23px auto;
+    display: block;
+  }
+}

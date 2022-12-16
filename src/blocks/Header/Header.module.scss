@@ -63,31 +63,6 @@ $size: 70px;
   }
 }
 
-.search input {
-  border-radius: $btn-border;
-  background: var(#{--day-background-gradient-default});
-  width: 516px;
-  height: $size;
-  font-size: 24px;
-  border: $border;
-  padding-left: 20px;
-  margin-right: 40px;
-  color: $white;
-}
-
-.icon_search {
-  width: 50px;
-  height: $size;
-  position: absolute;
-  left: 1095px;
-  cursor: pointer;
-
-  & svg {
-    margin:23px auto;
-    display: block;
-  }
-}
-
 .avatar {
   width: $size;
   height: $size;
